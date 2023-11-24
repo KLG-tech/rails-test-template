@@ -13,15 +13,9 @@ This Rails application template is designed to streamline the setup of new Rails
 - **TimeCop**: Allows "time travel" and "time freezing" capabilities in tests.
 - **Shoulda Matchers**: Offers simple one-liner tests for common Rails functionality.
 
-## How to Use in a New Project
-1. **Create a New Rails App**: Use this template when creating a new Rails app:
-   ```
-   rails new myapp -m https://raw.githubusercontent.com/KLG-tech/rails-test-template/main/app_template.rb
-   ```
-2. Follow the subsequent steps as detailed in the [Customization](#customization) and [Post-Setup](#post-setup) sections.
-
 ## How to Use in an existing project
-1. **Create a New Rails App**: Use this template when creating a new Rails app:
+Currently it only support for existing (newly created) Rails project.
+1. Run this command inside the project root:
    ```
    rails app:template LOCATION=https://raw.githubusercontent.com/KLG-tech/rails-test-template/main/app_template.rb
    ```
