@@ -1,6 +1,10 @@
 gem_group :development, :test do
   gem 'factory_bot_rails'
   gem 'rspec-rails'
+  gem "rubocop", require: false
+  gem "rubocop-rails", require: false
+  gem "rubocop-rake", require: false
+  gem "standard", require: false
 end
 
 gem_group :development do
@@ -15,13 +19,6 @@ gem_group :test do
   gem 'webmock', require: 'webmock/rspec'
   gem 'timecop'
   gem 'simplecov', require: false
-end
-
-gem_group :development, :test do
-  gem "rubocop", require: false
-  gem "rubocop-rails", require: false
-  gem "rubocop-rake", require: false
-  gem "standard", require: false
 end
 
 template = URI("https://gist.githubusercontent.com/rafeequl/12c0678e05853998bac361c6730a7d3a/raw/ca38d2a86d9943b5b45ba883625ff2c58ade4a93/rubocop.yml")
