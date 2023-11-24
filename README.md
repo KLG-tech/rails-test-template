@@ -32,6 +32,31 @@ Currently it only support for existing (newly created) Rails project.
 
 - This template is flexible for modification to meet specific project requirements.
 
+## Troubleshoot
+- **Pending migration error**: by default rspec will check if there is any pending migration and it will throw error if any. If you see something like this while generating model :
+
+```
+SystemExit:
+  Migrations are pending. To resolve this issue, run:
+
+          bin/rails db:migrate
+
+  You have 1 pending migration:
+```
+
+Then you may want to comment out this line from `spec/rails_helper.rb` file :
+
+```
+# Checks for pending migrations and applies them before tests are run.
+# If you are not using ActiveRecord, you can remove these lines.
+# begin
+#   ActiveRecord::Migration.maintain_test_schema!
+# rescue ActiveRecord::PendingMigrationError => e
+#   abort e.to_s.strip
+# end
+```
+
+
 ---
 
 This addition should provide guidance on integrating the template's features into an existing Rails project. Be sure to carefully check compatibility with your project's existing setup and Rails version.
