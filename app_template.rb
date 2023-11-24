@@ -1,10 +1,10 @@
 gem_group :development, :test do
   gem 'factory_bot_rails'
   gem 'rspec-rails'
-  gem "rubocop", require: false
-  gem "rubocop-rails", require: false
-  gem "rubocop-rake", require: false
-  gem "standard", require: false
+  gem 'rubocop', require: false
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-rake', require: false
+  gem 'standard', require: false
 end
 
 gem_group :development do
@@ -21,12 +21,12 @@ gem_group :test do
   gem 'simplecov', require: false
 end
 
-template = URI("https://gist.githubusercontent.com/rafeequl/12c0678e05853998bac361c6730a7d3a/raw/ca38d2a86d9943b5b45ba883625ff2c58ade4a93/rubocop.yml")
-create_file ".rubocop.yml", template.read
+template = URI('https://gist.githubusercontent.com/rafeequl/12c0678e05853998bac361c6730a7d3a/raw/ca38d2a86d9943b5b45ba883625ff2c58ade4a93/rubocop.yml')
+create_file '.rubocop.yml', template.read
 
-if yes?("Would you like to add ruby-lsp-rails?")
+if yes?('Would you like to add ruby-lsp-rails?')
   gem_group :development do
-    gem "ruby-lsp-rails"
+    gem 'ruby-lsp-rails'
   end
 end
 
@@ -112,7 +112,7 @@ File.open(Rails.root.join('spec/support/shoulda.rb'), 'w') do |file|
 end
 
 File.open(Rails.root.join('spec/support/vcr.rb'), 'w') do |file|
-  vcr = URI("https://gist.githubusercontent.com/rafeequl/2d599cbc6afe3e4108070faf7f335d89/raw/3634a7702401a356ac9bf2e90d1f02cda39193a5/vcr.rb").read
+  vcr = URI('https://gist.githubusercontent.com/rafeequl/2d599cbc6afe3e4108070faf7f335d89/raw/3634a7702401a356ac9bf2e90d1f02cda39193a5/vcr.rb').read
   file.write(vcr)
 end
 
