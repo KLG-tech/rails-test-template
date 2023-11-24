@@ -16,12 +16,17 @@ This Rails application template is designed to streamline the setup of new Rails
 ## How to Use in a New Project
 1. **Create a New Rails App**: Use this template when creating a new Rails app:
    ```
-   rails new myapp -m /path/to/this/template.rb
+   rails new myapp -m https://raw.githubusercontent.com/KLG-tech/rails-test-template/main/app_template.rb
    ```
 2. Follow the subsequent steps as detailed in the [Customization](#customization) and [Post-Setup](#post-setup) sections.
+
+## How to Use in an existing project
+1. **Create a New Rails App**: Use this template when creating a new Rails app:
    ```
-   rails new myapp -m /path/to/this/template.rb
+   rails app:template LOCATION=https://raw.githubusercontent.com/KLG-tech/rails-test-template/main/app_template.rb
    ```
+2. Follow the subsequent steps as detailed in the [Customization](#customization) and [Post-Setup](#post-setup) sections.
+
 
 ## Customization
 - **Modifying `.rspec`**: Adjust RSpec flags and formats to suit your preferences.
